@@ -1,0 +1,15 @@
+{
+  "name": "minifarm-monitor",
+  "version": "1.0.0",
+  "description": "MiniFarm Monitor - Pédagogie des systèmes embarqués et temps réel via simulateur de capteurs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "simulate": "node simulateur.js"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}
