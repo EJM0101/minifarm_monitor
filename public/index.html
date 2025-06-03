@@ -1,1 +1,44 @@
-...
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>MiniFarm Monitor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌿 MiniFarm Monitor</h1>
+    <p class="desc">
+      Surveillez les mesures de vos capteurs en temps réel.<br>
+      Cette application simule une mini-ferme connectée avec des capteurs (ESP32 simulé).
+    </p>
+
+    <section class="realtime">
+      <h2>📊 Données Temps Réel</h2>
+      <pre id="live">Aucune donnée reçue.</pre>
+    </section>
+
+    <section class="doc">
+      <h2>📚 Concepts pédagogiques</h2>
+      <ul>
+        <li>🔌 Simulation d'un système embarqué (ESP32)</li>
+        <li>📡 Transmission HTTP vers un serveur Node.js</li>
+        <li>🧠 Traitement en temps réel via WebSocket</li>
+        <li>🗂️ Historique temporaire en mémoire (10 dernières mesures)</li>
+        <li>🧪 Simulateur intégré pour tests automatiques</li>
+      </ul>
+    </section>
+
+    <section class="api">
+      <h2>🔧 Tester l'API</h2>
+      <p>Exemple de requête <code>curl</code> :</p>
+      <pre><code>curl -X POST http://localhost:3000/api/data \\
+  -H "Content-Type: application/json" \\
+  -d '{"capteur":"ESP32", "type":"Température", "valeur":28.4}'</code></pre>
+    </section>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
